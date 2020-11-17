@@ -11,7 +11,7 @@ pipeline {
         stage('Push Docker Image to Dockerhub') {
             steps {
                 echo 'Publishing Docker Image..'
-                withDockerRegistry([ credentialsId: "41c3a71-8c0c-494b-b8ad-164e38cd252d", url: ""]){
+                withDockerRegistry([ credentialsId: "41c3a71a-8c0c-494b-b8ad-164e38cd252d", url: ""]){
                     sh 'docker push drcrinkle/nclouds-demo:latest'
                 }
             }
