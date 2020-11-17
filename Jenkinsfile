@@ -15,6 +15,7 @@ pipeline {
                     sh 'docker push drcrinkle/nclouds-demo:latest'
                 }
             }
+        }
         stage('Deploy to Kubernetes') {
             steps {
                 echo 'Deploying..'
